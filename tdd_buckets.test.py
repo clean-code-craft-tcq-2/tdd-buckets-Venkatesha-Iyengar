@@ -36,7 +36,7 @@ class tdd_buckets_test(unittest.TestCase):
         self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object1.get_absolute_range([],max_current_in_amps=10)),{})
         self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object2.get_absolute_range([],max_current_in_amps=10)),{})
         self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object1.get_absolute_range([0,1024,2048,4095],max_current_in_amps=10)),{})
-        self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object1.get_absolute_range([0,10,20,30,100,1024,2048,4095],max_current_in_amps=10)),{'0-0':4})
+        self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object1.get_absolute_range([0,10,20,30,1001024,2048,4095],max_current_in_amps=10)),{'0-0':4})
         self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object2.get_absolute_range([0,1024,2048,4095],max_current_in_amps=15)),{})
         self.assertEqual(Obj_Group_Number_Range.iterate_numbers(adc_object2.get_absolute_range([0,10,204,511,4095],max_current_in_amps=15)),{'15-15':2})
         
