@@ -16,7 +16,7 @@ class A2D_Conerter:
         return list_absolute_current_values
 
     def get_valid_range(self, list_digital_values):
-        return [value for value in list_digital_values if abs(value)<self.max_possible_digital_value]
+        return [value for value in list_digital_values if 0<value<self.max_possible_digital_value]
 
     def get_absolute_current_value(self, digital_value):
         if self.flag_is_signed:
